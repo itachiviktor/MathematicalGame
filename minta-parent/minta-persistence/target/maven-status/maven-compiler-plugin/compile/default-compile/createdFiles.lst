@@ -1,0 +1,4 @@
+hu\mathgame\persist\User.class
+hu\mathgame\persist\GameDAO.class
+hu\mathgame\persist\Table.class
+hu\mathgame\persist\Field.class

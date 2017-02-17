@@ -1,0 +1,4 @@
+hu\astron\client\UpdateServlet.class
+hu\astron\client\DeleteServlet.class
+hu\astron\client\CreateServlet.class
+hu\astron\client\ReadServlet.class
