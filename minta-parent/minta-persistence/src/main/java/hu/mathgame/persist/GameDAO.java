@@ -32,4 +32,14 @@ public class GameDAO {
         Table table = em.find(Table.class, tableID);
         return table.getUsers();
     }
+    
+    public Number fieldNumber(int fieldID){
+        Field field = em.find(Field.class, fieldID);
+        return field.getChildrenNumber();
+    }
+    
+    public List<Number> userAllNumbers(int userID){
+        User user = em.find(User.class, userID);
+        return user.getNumbers();
+    }
 }

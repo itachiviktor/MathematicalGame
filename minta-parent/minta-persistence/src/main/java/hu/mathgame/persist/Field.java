@@ -9,10 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity(name = "FIELD")
-
 public class Field implements Serializable {
 
     @Id
@@ -28,6 +28,9 @@ public class Field implements Serializable {
     @ManyToOne
     @JoinColumn(name = "mtablefk")
     private Table fktable;
+    
+    @OneToOne(mappedBy="field")
+    private Number childrenNumber;
 
     public Field() {
 
@@ -55,6 +58,26 @@ public class Field implements Serializable {
 
     public void setRowindex(int rowindex) {
         this.rowindex = rowindex;
+    }
+    
+    
+    public Number getChildrenNumber() {
+        return childrenNumber;
+    }
+    
+    
+    public void setChildrenNumber(Number childrenNumber) {
+        this.childrenNumber = childrenNumber;
+    }
+    
+    
+    public void setFktable(Table fktable) {
+        this.fktable = fktable;
+    }
+    
+    
+    public Table getFktable() {
+        return fktable;
     }
 
     @Override

@@ -1,9 +1,11 @@
 package hu.mathgame.persist;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 @Entity(name = "MUSER")
@@ -41,6 +44,10 @@ public class User implements Serializable {
     @ManyToOne
     @JoinColumn(name = "mtablefk")
     private Table table;
+    
+    @OneToMany(mappedBy = "user", targetEntity = Number.class)
+    private List<Number> numbers;
+
 
     public User() {
 
@@ -100,6 +107,26 @@ public class User implements Serializable {
 
     public void setPaired(int paired) {
         this.paired = paired;
+    }
+    
+    
+    public List<Number> getNumbers() {
+        return numbers;
+    }
+    
+    
+    public Table getTable() {
+        return table;
+    }
+    
+    
+    public void setNumbers(List<Number> numbers) {
+        this.numbers = numbers;
+    }
+    
+    
+    public void setTable(Table table) {
+        this.table = table;
     }
 
     @Override

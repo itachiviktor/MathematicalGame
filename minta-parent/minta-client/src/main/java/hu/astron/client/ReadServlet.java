@@ -42,17 +42,24 @@ public class ReadServlet extends HttpServlet {
                 .append("<th>Half Time Score</th><th>Full Time Score</th></tr>");
 
         for (Table result : list) {
-            out.append("<tr><td>");
-            out.append(result.toString());
+           /* out.append("<tr><td>");
+            out.append(result.toString());*/
             int tableID = result.getId();
-            for (int i = 0; i < bean.tableUsers(tableID).size(); i++) {
+            /*for (int i = 0; i < bean.tableUsers(tableID).size(); i++) {
                 out.append("<tr><td>");
                 out.append(bean.tableUsers(tableID).get(i).toString());
-            }
-            for (int i = 0; i < bean.tableFields(tableID).size(); i++) {
+            }*/
+            
+            List<hu.mathgame.persist.Number> nums = bean.userAllNumbers(-002);
+            for(int i=0;i<nums.size();i++){
                 out.append("<tr><td>");
-                out.append(bean.tableFields(tableID).get(i).toString());
+                out.append(nums.get(i));
             }
+                
+           /* for (int i = 0; i < bean.tableFields(tableID).size(); i++) {
+                out.append("<tr><td>");
+                out.append(bean.tableFields(tableID).get(i).getChildrenNumber());
+            }*/
 
         }
 

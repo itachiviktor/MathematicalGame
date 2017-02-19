@@ -1,4 +1,9 @@
+META-INF\MANIFEST.MF
+hu\mathgame\persist\Number.class
+META-INF\maven\hu.astron\minta-persistence\pom.properties
 hu\mathgame\persist\User.class
 hu\mathgame\persist\GameDAO.class
 hu\mathgame\persist\Table.class
+hu\mathgame\persist\NumberPK.class
+META-INF\maven\hu.astron\minta-persistence\pom.xml
 hu\mathgame\persist\Field.class

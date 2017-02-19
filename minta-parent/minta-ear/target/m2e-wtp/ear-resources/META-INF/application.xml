@@ -4,7 +4,6 @@
 	"http://java.sun.com/dtd/application_1_3.dtd">
 <application>
   <display-name>minta-ear</display-name>
-  <description>Maven alapvető beállítások Java modulokhoz</description>
   <module>
     <web>
       <web-uri>minta-client-0.0.1-SNAPSHOT.war</web-uri>

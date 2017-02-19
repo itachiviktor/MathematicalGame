@@ -8,6 +8,7 @@ import javax.ejb.Stateless;
 
 import hu.mathgame.persist.Field;
 import hu.mathgame.persist.GameDAO;
+import hu.mathgame.persist.Number;
 import hu.mathgame.persist.Table;
 import hu.mathgame.persist.User;
 
@@ -32,6 +33,14 @@ public class GameLogicBean {
 
     public List<User> tableUsers(int tableID) {
         return dao.tableUsers(tableID);
+    }
+    
+    public Number fieldNumber(int fieldID){
+        return dao.fieldNumber(fieldID);
+    }
+    
+    public List<Number> userAllNumbers(int userID){
+        return dao.userAllNumbers(userID);
     }
 
 }
