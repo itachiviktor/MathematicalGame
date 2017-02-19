@@ -1,4 +1,8 @@
+hu\astron\client\AjaxPostRequest.class
 hu\astron\client\UpdateServlet.class
+hu\astron\client\ButtonServlet.class
+hu\astron\client\SearchDuelPartner.class
 hu\astron\client\DeleteServlet.class
 hu\astron\client\CreateServlet.class
+hu\astron\client\Login.class
 hu\astron\client\ReadServlet.class

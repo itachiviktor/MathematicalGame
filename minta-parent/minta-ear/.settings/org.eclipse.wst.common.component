@@ -11,5 +11,8 @@
         <dependent-module archiveName="minta-persistence-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/minta-persistence/minta-persistence">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="json-20160810.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/json/json/20160810/json-20160810.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>
